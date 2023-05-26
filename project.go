@@ -189,8 +189,9 @@ func (s *projects) DeleteCheckoutKey(ctx context.Context, projectSlug, fingerpri
 }
 
 type ProjectVariable struct {
-	Name  string `json:"name"`
-	Value string `json:"value"`
+	Name      string    `json:"name"`
+	Value     string    `json:"value"`
+	CreatedAt time.Time `json:"created-at"`
 }
 
 type ProjectCreateVariableOptions struct {
